@@ -1,0 +1,63 @@
+{
+    "workbench.colorTheme": "Default Dark+",
+    "redhat.telemetry.enabled": true,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": true
+    },
+    "githubIssues.queries": [
+        {
+            "label": "",
+            "query": "default"
+        },
+        {
+            "label": "",
+            "query": "author:${sarahvar} state:open repo:${owner}/${repository} sort:created-desc"
+        },
+        {
+            "label": "Recent Issues",
+            "query": "state:open repo:${owner}/${repository} sort:updated-desc"
+        }
+    ],
+    "git.autofetch": true,
+    "emmet.triggerExpansionOnTab": true,
+    "workbench.iconTheme": "vscode-icons",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "git.openRepositoryInParentFolders": "never",
+    "githubPullRequests.queries": [
+        {
+            "label": "En attente de mon évaluation",
+            "query": "is:open review-requested:${user}"
+        },
+        {
+            "label": "Qui me sont assignées",
+            "query": "is:open assignee:${user}"
+        },
+        {
+            "label": "Créé(es) par moi",
+            "query": "is:open author:${user}"
+        }
+    ],
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.editor.empty.hint": "hidden",
+    "hediet.vscode-drawio.resizeImages": null,
+    "window.zoomLevel": -1,
+    "files.associations": {
+        "*.scss": "scss"
+    },
+    "java.jdt.ls.java.home": "C:\\Program Files\\Java\\jdk-17"
+}
