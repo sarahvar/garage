@@ -9,7 +9,7 @@ public class GarageController {
 
     @RequestMapping("/car")
     public Car getCar() {
-        Car myCar = new Car("R21", "Renault", 1988, Car.Color.BLUE);
+        Car myCar = new Car("R21", "Renault", 1988, Car.Color.RED);
         return myCar;
     }
 }
