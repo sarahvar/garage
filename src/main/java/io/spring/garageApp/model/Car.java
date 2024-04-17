@@ -10,17 +10,29 @@ public class Car {
     }
 
     // Définition des attributs de la classe Car
+    private long id;
     private String model; // Modèle de la voiture
     private String brand; // Marque de la voiture
     private int year; // Année de fabrication de la voiture
     private Color color; // Couleur de la voiture
 
     // Constructeur de la classe Car
-    public Car(String model, String brand, int year, Color color) {
+    public Car(long id, String model, String brand, int year, Color color) {
+        this.id = id;
         this.model = model;
         this.brand = brand;
         this.year = year;
         this.color = color;
+    }
+
+    // Méthode getter pour sélectionner l'identifiant de la voiture
+    public long getId() {
+        return id;
+    }
+
+    // Méthode setter pour définir l'identifiant de la voiture
+    public void setId(long id) {
+        this.id = id;
     }
 
     // Méthode getter pour récupérer le modèle de la voiture
