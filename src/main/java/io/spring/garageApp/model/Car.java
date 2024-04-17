@@ -6,7 +6,7 @@ public class Car {
     
     // Définition d'un enum pour représenter les couleurs de la voiture
     public enum Color {
-        RED, BLUE, GREEN, YELLOW
+        RED, BLUE, BROWN, YELLOW
     }
 
     // Définition des attributs de la classe Car
