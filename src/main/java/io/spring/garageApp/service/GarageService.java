@@ -26,4 +26,13 @@ public class GarageService {
                    .findFirst()
                    .orElse(null);
     }
+
+    
+    public void deleteCar(long id) {
+        cars.removeIf(car -> car.getId() == id);
+    }
+
+    public void addCar(Car car) {
+        cars.add(car);
+    }
 }

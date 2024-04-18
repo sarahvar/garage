@@ -16,8 +16,11 @@ public class Car {
     private int year; // Année de fabrication de la voiture
     private Color color; // Couleur de la voiture
 
+    public Car() {}
+
     // Constructeur de la classe Car
     public Car(long id, String model, String brand, int year, Color color) {
+        super();
         this.id = id;
         this.model = model;
         this.brand = brand;
