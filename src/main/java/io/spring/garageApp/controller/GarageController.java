@@ -34,6 +34,11 @@ private GarageService garageService;
         @RequestMapping(method = RequestMethod.POST, value = "/cars")
         public void addCar(@RequestBody Car car) {
             garageService.addCar(car);
-        } 
+        }
+
+        @RequestMapping(method = RequestMethod.PUT, value = "/car/{id}")
+        public void updateCar(@RequestBody Car car ,@PathVariable long id) {
+            garageService.updateCar(car, id);
         }  
+    }
 

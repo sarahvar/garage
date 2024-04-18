@@ -35,4 +35,12 @@ public class GarageService {
     public void addCar(Car car) {
         cars.add(car);
     }
+
+    public void updateCar(Car car, long id) {
+        cars.forEach(car1 -> {
+            if (car1.getId() == id) {
+                cars.set(cars.indexOf(car1), car);
+            }
+        });
+    }
 }
