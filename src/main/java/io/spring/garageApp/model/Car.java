@@ -1,6 +1,10 @@
 // Définition du package dans lequel se trouve la classe Car
 package io.spring.garageApp.model;
 
+import javax.persistence.*;
+
+
+@Entity
 // Définition de la classe Car
 public class Car {
     
@@ -10,6 +14,7 @@ public class Car {
     }
 
     // Définition des attributs de la classe Car
+    @Id
     private long id;
     private String model; // Modèle de la voiture
     private String brand; // Marque de la voiture
