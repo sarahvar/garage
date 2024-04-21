@@ -1,9 +1,8 @@
-package io.spring.garageApp.repository;
+package com.example.garageApp.repository;
 
+import com.example.garageApp.model.Car;
 import org.springframework.data.repository.CrudRepository;
-import io.spring.garageApp.model.Car;
 
 public interface GarageRepository extends CrudRepository<Car, Long> {
-
-    
 }
+
