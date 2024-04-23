@@ -1,1 +1,1 @@
-Application en Java/Angular 
+Application en Java Spring Boot/Angular 
