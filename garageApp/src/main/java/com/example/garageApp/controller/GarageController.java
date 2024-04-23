@@ -1,40 +1,50 @@
+// CarController.java
+
 package com.example.garageApp.controller;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
 import com.example.garageApp.model.Car;
 import com.example.garageApp.service.GarageService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "*")
 @RestController
+@RequestMapping("/cars")
 public class GarageController {
 
     @Autowired
     private GarageService garageService;
-
-    @RequestMapping("/cars")
-    public List<Car> getCars() {
-        return garageService.getCars();
+    
+    @GetMapping
+    public ResponseEntity<List<Car>> getAllCars() {
+        List<Car> cars = garageService.getAllCars();
+        return new ResponseEntity<>(cars, HttpStatus.OK);
     }
 
-    @RequestMapping("/car/{id}")
-    public Car getCar(@PathVariable long id) {
-        return garageService.getCar(id);
+    @GetMapping("/{id}")
+    public ResponseEntity<Car> getCarById(@PathVariable Long id) {
+        Car car = garageService.getCarById(id);
+        return new ResponseEntity<>(car, HttpStatus.OK);
     }
-
-    @RequestMapping(method = RequestMethod.DELETE, value = "/car/{id}")
-    public void deleteCar(@PathVariable long id) {
+    
+    @PostMapping("/carCreate")
+    public ResponseEntity<Car> createCar(@RequestBody Car car) {
+        Car newCar = garageService.createCar(car);
+        return new ResponseEntity<>(newCar, HttpStatus.CREATED);
+    }
+    
+    @PutMapping("/{id}")
+    public ResponseEntity<Car> updateCar(@PathVariable("id") Long id, @RequestBody Car updatedCar) {
+        Car car = garageService.updateCar(id, updatedCar);
+        return new ResponseEntity<>(car, HttpStatus.OK);
+    }
+    
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<Void> deleteCar(@PathVariable Long id) {
         garageService.deleteCar(id);
-    }
-
-    @RequestMapping(method = RequestMethod.POST, value = "/cars")
-    public void addCar(@RequestBody Car car) {
-        garageService.add(car);
-    }
-
-    @RequestMapping(method = RequestMethod.PUT, value = "/car/{id}")
-    public void updateCar(@RequestBody Car car, @PathVariable long id) {
-        garageService.updateCar(car, id);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }
