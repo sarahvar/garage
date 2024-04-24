@@ -1,5 +1,5 @@
 
-package com.springapp.garage.exception;
+package com.example.garageApp.exception;
 
 	public class ResourceNotFoundException extends RuntimeException {
 	    /**
