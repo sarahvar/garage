@@ -40,12 +40,6 @@ public ResponseEntity<Car> updateCar(@PathVariable("id") Long id, @RequestBody C
     return new ResponseEntity<>(car, HttpStatus.OK);
 }
 
-@PutMapping("/garage/{id}")
-public ResponseEntity<Car> updateGarage(@PathVariable("id") Long id, @RequestBody Car updatedGarage) {
-    Car car = garageService.updateCar(id, updatedGarage);
-    return new ResponseEntity<>(car, HttpStatus.OK);
-}
-
     
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deleteCar(@PathVariable Long id) {
@@ -53,10 +47,4 @@ public ResponseEntity<Car> updateGarage(@PathVariable("id") Long id, @RequestBod
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteGarage(@PathVariable Long id) {
-        garageService.deleteCar(id);
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
 }
