@@ -1,5 +1,3 @@
-// CarController.java
-
 package com.example.garageApp.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -36,14 +34,28 @@ public class GarageController {
         return new ResponseEntity<>(newCar, HttpStatus.CREATED);
     }
     
-    @PutMapping("/{id}")
-    public ResponseEntity<Car> updateCar(@PathVariable("id") Long id, @RequestBody Car updatedCar) {
-        Car car = garageService.updateCar(id, updatedCar);
-        return new ResponseEntity<>(car, HttpStatus.OK);
-    }
+    @PutMapping("/car/{id}")
+public ResponseEntity<Car> updateCar(@PathVariable("id") Long id, @RequestBody Car updatedCar) {
+    Car car = garageService.updateCar(id, updatedCar);
+    return new ResponseEntity<>(car, HttpStatus.OK);
+}
+
+@PutMapping("/garage/{id}")
+public ResponseEntity<Car> updateGarage(@PathVariable("id") Long id, @RequestBody Car updatedGarage) {
+    Car car = garageService.updateCar(id, updatedGarage);
+    return new ResponseEntity<>(car, HttpStatus.OK);
+}
+
     
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deleteCar(@PathVariable Long id) {
+        garageService.deleteCar(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteGarage(@PathVariable Long id) {
         garageService.deleteCar(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
