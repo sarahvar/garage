@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Car } from '../Car/car';
 import { CarService } from '../Service/car.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-car',
@@ -11,21 +10,23 @@ import { Router } from '@angular/router';
 export class CarComponent implements OnInit {
   cars: Car[] = [];
 
-  constructor(private carService:  CarService, private router: Router) {}
+  constructor(private carService: CarService) {}
 
   ngOnInit(): void {
+    this.loadCars();
+  }
+
+  loadCars(): void {
     this.carService.getAllcars().subscribe((data: Car[]) => {
       this.cars = data;
     });
   }
-  deleteCar(id: number | undefined): void {
-    if (id !== undefined) {
+
+  deleteCar(id: number): void {
+    if (confirm('Are you sure you want to delete this car?')) {
       this.carService.deleteCar(id).subscribe(() => {
-        // Update the car list or navigate to another view after successful deletion
+        this.loadCars(); // Rechargez la liste des voitures après la suppression
       });
-    } else {
-      console.error('Car ID is undefined');
     }
   }
-
 }
