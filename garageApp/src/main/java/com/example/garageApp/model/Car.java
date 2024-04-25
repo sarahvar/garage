@@ -11,17 +11,17 @@ public class Car {
 
 
     enum Color {
-        RED,
-        BLUE,
-        GREEN,
-        YELLOW,
-        BLACK,
-        WHITE,
-        ORANGE,
-        PURPLE,
-        BROWN,
-        GRAY,
-        SILVER
+        rouge,
+        bleu,
+        vert,
+        jaune,
+        noire,
+        blanc,
+        orange,
+        violet,
+        marron,
+        gris,
+        argent
     }
 
     @Id

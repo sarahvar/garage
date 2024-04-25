@@ -27,6 +27,7 @@ export class CarService {
   }
 
   deleteCar(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/delete/${id}`);
-  }
+    const url = `${this.apiUrl}/${id}/delete`; // Utilisez l'endpoint de suppression approprié
+    return this.http.delete<void>(url);
+}
 }

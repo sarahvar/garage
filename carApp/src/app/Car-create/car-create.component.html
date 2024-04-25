@@ -23,7 +23,7 @@
   <div class="container">
     <form (ngSubmit)="createCar()" class="needs-validation" novalidate>
       <div class="form-group">
-        <label for="brand">Brand:</label>
+        <label for="brand">Marque:</label>
         <input type="text" id="brand" [(ngModel)]="car.brand" name="brand" class="form-control" required>
         <div class="invalid-feedback">
           Please enter a brand.
@@ -37,14 +37,14 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="year">Year:</label>
+        <label for="year">Année:</label>
         <input type="text" id="year" [(ngModel)]="car.year" name="year" class="form-control" required>
         <div class="invalid-feedback">
           Please enter a valid year.
         </div>
       </div>
       <div class="form-group">
-        <label for="color">Color:</label>
+        <label for="color">Couleur:</label>
         <input type="text" id="color" [(ngModel)]="car.color" name="color" class="form-control" required>
         <div class="invalid-feedback">
           Please enter a color.
