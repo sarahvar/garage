@@ -22,9 +22,9 @@ export class CarComponent implements OnInit {
     });
   }
 
-  deleteCar(id: number): void {
+  deleteCar(car: Car): void {
     if (confirm('Are you sure you want to delete this car?')) {
-      this.carService.deleteCar(id).subscribe(() => {
+      this.carService.deleteCar(car.id).subscribe(() => {
         this.loadCars(); // Rechargez la liste des voitures après la suppression
       });
     }

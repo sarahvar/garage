@@ -26,7 +26,7 @@ export class CarService {
     return this.http.put<Car>(`${this.apiUrl}/${car.id}`, car);
   }
 
-  deleteCar(id: number): Observable<void> {
+  deleteCar(id: number | undefined): Observable<void> {
     const url = `${this.apiUrl}/${id}/delete`; // Utilisez l'endpoint de suppression approprié
     return this.http.delete<void>(url);
 }
