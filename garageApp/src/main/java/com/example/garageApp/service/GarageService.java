@@ -11,7 +11,7 @@ public interface GarageService {
 
     Car getCarById(Long id);
 
-    Car createCar(Car car);
+    Car add (Car car);
 
     void deleteCar(Long id);
     

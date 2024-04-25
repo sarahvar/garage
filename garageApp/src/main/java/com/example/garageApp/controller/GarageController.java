@@ -17,34 +17,32 @@ public class GarageController {
     private GarageService garageService;
     
     @GetMapping
-    public ResponseEntity<List<Car>> getAllCars() {
+    public ResponseEntity<List<Car>> getCars() {
         List<Car> cars = garageService.getAllCars();
         return new ResponseEntity<>(cars, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Car> getCarById(@PathVariable Long id) {
+    public ResponseEntity<Car> getCar(@PathVariable Long id) {
         Car car = garageService.getCarById(id);
         return new ResponseEntity<>(car, HttpStatus.OK);
     }
     
-    @PostMapping("/carCreate")
-    public ResponseEntity<Car> createCar(@RequestBody Car car) {
-        Car newCar = garageService.createCar(car);
-        return new ResponseEntity<>(newCar, HttpStatus.CREATED);
+    @PostMapping
+    public ResponseEntity<Car> add(@RequestBody Car car) {
+        garageService.add(car);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
     
-    @PutMapping("/car/{id}")
-public ResponseEntity<Car> updateCar(@PathVariable("id") Long id, @RequestBody Car updatedCar) {
-    Car car = garageService.updateCar(id, updatedCar);
-    return new ResponseEntity<>(car, HttpStatus.OK);
-}
+    @PutMapping("/{id}")
+    public ResponseEntity<Car> updateCar(@PathVariable("id") Long id, @RequestBody Car updatedCar) {
+        garageService.updateCar(id, updatedCar);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 
-    
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteCar(@PathVariable Long id) {
         garageService.deleteCar(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
-
 }

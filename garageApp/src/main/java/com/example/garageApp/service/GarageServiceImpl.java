@@ -26,7 +26,7 @@ public class GarageServiceImpl implements GarageService {
     }
 
     @Override
-    public Car createCar(Car car) {
+    public Car add(Car car) {
         return garageRepository.save(car);
     }
 
