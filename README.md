@@ -4,7 +4,7 @@ Application en Java Spring Boot/Angular
 
 Mes choix technologiques dans le développement de mon application de gestion de garage
 
-Contexte : Je souhaite me former à Java et Angular.
+Contexte : Je souhaite travailler sur une API CRUD.
 
 Java (Backend) :
 
