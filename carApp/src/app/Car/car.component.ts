@@ -23,10 +23,18 @@ export class CarComponent implements OnInit {
   }
 
   deleteCar(car: Car): void {
+    if (!car || car.id === undefined) {
+      console.error('Car ID is undefined');
+      return;
+    }
+
     if (confirm('Are you sure you want to delete this car?')) {
       this.carService.deleteCar(car.id).subscribe(() => {
-        this.loadCars(); // Rechargez la liste des voitures après la suppression
+        this.carService.updateCarsAfterDelete(car.id || 0).subscribe(cars => {
+          this.cars = cars;
+        });
       });
     }
   }
+
 }
