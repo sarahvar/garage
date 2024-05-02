@@ -27,7 +27,7 @@ export class CarService {
   }
 
   deleteCar(id: number | undefined): Observable<void> {
-    const url = `${this.apiUrl}/${id}/delete`; // Utilisez l'endpoint de suppression approprié
+    const url = `${this.apiUrl}/delete/${id}`; // Utilisez l'endpoint de suppression approprié
     return this.http.delete<void>(url);
 }
 }

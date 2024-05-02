@@ -32,7 +32,9 @@ public class GarageServiceImpl implements GarageService {
 
     @Override
     public void deleteCar(Long id) {
-        garageRepository.deleteById(id);
+        Car car = garageRepository.findById(id).orElse(null);
+        System.out.println(car);
+        garageRepository.delete(car);
     }
 
 	@Override

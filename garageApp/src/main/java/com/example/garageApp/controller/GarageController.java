@@ -38,11 +38,13 @@ public class GarageController {
     public ResponseEntity<Car> updateCar(@PathVariable("id") Long id, @RequestBody Car updatedCar) {
         garageService.updateCar(id, updatedCar);
         return new ResponseEntity<>(HttpStatus.OK);
+        
     }
 
-    @DeleteMapping("/{id}/delete")
+    @DeleteMapping("delete/{id}")
     public ResponseEntity<Void> deleteCar(@PathVariable Long id) {
         garageService.deleteCar(id);
+        System.out.println("Car deleted successfully");
         return new ResponseEntity<>(HttpStatus.OK);
     }    
 }
