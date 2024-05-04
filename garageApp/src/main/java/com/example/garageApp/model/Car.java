@@ -2,6 +2,8 @@ package com.example.garageApp.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
@@ -25,6 +27,7 @@ public class Car {
     }
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     // ajout de l attribut id qui permet de creer une nouvelle entite dans la base de donnees
     private long id;
     private String model;
