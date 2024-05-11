@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { CarCreateComponent } from '../Car-create/car-create.component';
 import { CustomInterceptor } from './customInterceptor';
 
+
 const appRoutes: Routes = [
   { path: 'cars', component: CarComponent },
   { path: 'cars/:id/edit', component: CarEditComponent },
@@ -22,6 +23,7 @@ const appRoutes: Routes = [
     CarComponent,
     CarEditComponent,
     CarCreateComponent,
+
   ],
   imports: [
     BrowserModule,
