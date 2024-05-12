@@ -39,7 +39,7 @@ public class GarageController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("delete/{id}")
     public ResponseEntity<Void> deleteCar(@PathVariable Long id) {
         garageService.deleteCar(id);
         System.out.println("Car deleted successfully");
