@@ -41,7 +41,6 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
-    @SuppressWarnings({ "removal", "deprecation" })
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
@@ -60,8 +59,8 @@ public class SecurityConfig {
     @Bean
     public UserDetailsService userDetailsService() {
         UserDetails user = User.builder()
-                .username("Chloe Price")
-                .password(passwordEncoder().encode("110394"))
+                .username("sarah")
+                .password(passwordEncoder().encode("sarah"))
                 .roles("USER")
                 .build();
         

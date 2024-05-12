@@ -6,7 +6,6 @@ import { CarCreateComponent } from '../Car-create/car-create.component';
 import { LoginComponent } from '../Login/login.component';
 
 const routes: Routes = [
-  //{ path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'cars', component: CarComponent },
   { path: 'cars/:id/edit', component: CarEditComponent },
   { path: 'cars/:id/delete', component: CarComponent },
