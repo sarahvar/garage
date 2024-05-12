@@ -9,7 +9,7 @@ import { CarEditComponent } from '../Car-edit/car-edit.component';
 import { FormsModule } from '@angular/forms';
 import { CarCreateComponent } from '../Car-create/car-create.component';
 import { CustomInterceptor } from './customInterceptor';
-
+import { LoginComponent } from '../Login/login.component';
 
 const appRoutes: Routes = [
   { path: 'cars', component: CarComponent },
@@ -23,6 +23,7 @@ const appRoutes: Routes = [
     CarComponent,
     CarEditComponent,
     CarCreateComponent,
+    LoginComponent,
 
   ],
   imports: [
