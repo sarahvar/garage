@@ -17,4 +17,9 @@ Angular : Pour le frontend, j'ai choisi Angular en raison de sa structure basée
 Services Angular : J'utilise les services Angular pour encapsuler la logique métier et pour interagir avec le backend via des requêtes HTTP. Cela me permet de maintenir un code propre et bien organisé, tout en favorisant la réutilisation des fonctionnalités.
 Observables RxJS : J'ai choisi d'utiliser des observables RxJS pour gérer les flux de données asynchrones entre les composants et les services. Cette approche me permet de gérer efficacement les mises à jour en temps réel et les interactions utilisateur dans mon application.
 En combinant Spring Boot pour le backend et Angular pour le frontend, je suis convaincue que je peux créer une application robuste, évolutive et facile à maintenir qui répondra aux besoins de mes utilisateurs tout en offrant une expérience utilisateur moderne et réactive.
+<<<<<<< HEAD
 # garage_login
+=======
+
+https://www.linkedin.com/feed/update/urn:li:activity:7192550577094967297/
+>>>>>>> e9cac809408c742132a2cdb65efeb6564960389c
