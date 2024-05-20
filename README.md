@@ -20,5 +20,4 @@ Observables RxJS : J'ai choisi d'utiliser des observables RxJS pour gérer les f
 En combinant Spring Boot pour le backend et Angular pour le frontend, je suis convaincue que je peux créer une application robuste, évolutive et facile à maintenir qui répondra aux besoins de mes utilisateurs tout en offrant une expérience utilisateur moderne et réactive.
 
 https://www.linkedin.com/feed/update/urn:li:activity:7192550577094967297/
->>>>>>> e9cac809408c742132a2cdb65efeb6564960389c
->>>>>>> 4f362799ee95216692ac00e89d619f9ad569dae9
+https://www.linkedin.com/feed/update/urn:li:activity:7198411706971111424/
